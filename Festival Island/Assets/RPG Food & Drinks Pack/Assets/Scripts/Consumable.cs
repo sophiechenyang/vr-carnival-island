@@ -29,7 +29,7 @@ public class Consumable : MonoBehaviour
         {
             index++;
             SetVisuals();
-            //_audioSource.Play();
+            _audioSource.Play();
         }
     }
     void SetVisuals()
