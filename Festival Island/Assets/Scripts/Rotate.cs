@@ -2,10 +2,25 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    public Vector3 vect;
+    Vector3 origin;
+    //public Vector3 vect;
+    float speed = 1.2f;
+    public float amplitude;
+
+    private void Start()
+    {
+        origin = transform.position;
+    }
+
+    void calculateSin()
+    {
+        Mathf.Sin(speed * Time.time);
+    }
 
     void Update()
     {
-        transform.Rotate(vect * Time.deltaTime);
+        Vector3 curve = new Vector3(0,0,(Mathf.Sin(speed * Time.time))* amplitude);
+        transform.position = curve + origin;
+        //transform.Rotate(vect * Time.deltaTime);
     }
 }

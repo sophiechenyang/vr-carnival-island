@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
+  - ball
+  - Target
+  - Ignore
   layers:
   - Default
   - TransparentFX

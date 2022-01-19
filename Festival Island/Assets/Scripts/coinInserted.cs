@@ -2,17 +2,13 @@ using UnityEngine;
 
 public class coinInserted : MonoBehaviour
 {
-    public GameObject redBallPrefab, blueBallPrefab;
-    public GameObject redBallPosObj, blueBallPosObj;
-
-    Vector3 redBallPos;
-    Vector3 blueBallPos;
+    public GameObject ballPrefab;
+    public GameObject ballPos;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Coin"))
         {
-
             Destroy(other.gameObject);
             NewBallGame();
         }
@@ -25,9 +21,11 @@ public class coinInserted : MonoBehaviour
 
     void SpawnBalls()
     {
-        redBallPos = redBallPosObj.transform.position;
-        Instantiate(redBallPrefab, redBallPos, redBallPrefab.transform.rotation);
-        blueBallPos = redBallPosObj.transform.position;
-        Instantiate(blueBallPrefab, blueBallPos, redBallPrefab.transform.rotation);
+        int count = 10;
+        while(count > 0)
+        {
+            Instantiate(ballPrefab, ballPos.transform.position, ballPrefab.transform.rotation);
+            count--;
+        }
     }
 }

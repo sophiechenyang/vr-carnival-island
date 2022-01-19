@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7900211687797496944}
   - component: {fileID: 7900211687797496945}
   - component: {fileID: 7900211687797496946}
+  - component: {fileID: 7470102270531867499}
   m_Layer: 0
   m_Name: Red Ball
   m_TagString: ball
@@ -230,3 +231,15 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7470102270531867499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900211687797496947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30cbe8eb7ab544e8eb8918e033dcf7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

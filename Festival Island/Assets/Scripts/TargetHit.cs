@@ -7,7 +7,6 @@ public class TargetHit : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ball"))
         {
-            Debug.Log("collided");
             UpdateScore();
         }
     }
@@ -19,7 +18,7 @@ public class TargetHit : MonoBehaviour
         _scoreData.throwingScore += 10;
         //Debug.Log(_scoreData.throwingScore);
 
-        GameObject scoreObj = GameObject.Find("ScoreObj");
+        GameObject scoreObj = GameObject.Find("ScoreValue");
         TextMeshPro _scoreText = scoreObj.GetComponent<TextMeshPro>();
         _scoreText.SetText(_scoreData.throwingScore.ToString());
     }
