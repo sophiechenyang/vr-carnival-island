@@ -7,8 +7,6 @@ public class ThrowingGameManager : MonoBehaviour
     public GameObject ballPosition;
     public GameObject scoreText,scoreValue,instructions;
 
-    //public Vector3[] ballPos;
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(gameStarted);
