@@ -16,4 +16,20 @@ public class FeedAnimal : MonoBehaviour
     {
         m_animator.SetBool("Eat_b", isEating);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("food"))
+        {
+            isEating = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("food"))
+        {
+            isEating = false;
+        }
+    }
 }

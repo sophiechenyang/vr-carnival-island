@@ -5,6 +5,8 @@ public class ShootingGameManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     public int animalCount = 5;
 
+    public int shootingScore = 0;
+
     private float spawnInterval = 1.5f;
 
     void Start()
@@ -14,10 +16,6 @@ public class ShootingGameManager : MonoBehaviour
 
     void Update()
     {
-        //if (animalCount > 0)
-        //{
-        //    SpawnAnimals();
-        //}
     }
 
     void SpawnAnimals()

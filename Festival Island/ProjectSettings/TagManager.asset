@@ -8,6 +8,8 @@ TagManager:
   - ball
   - Target
   - Ignore
+  - chicken
+  - food
   layers:
   - Default
   - TransparentFX
