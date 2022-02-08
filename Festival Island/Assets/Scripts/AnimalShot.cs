@@ -16,9 +16,7 @@ public class AnimalShot : MonoBehaviour
         {
             m_audio.Play();
             UpdateScore();
-            Destroy(gameObject);
             Destroy(other.gameObject);
-
         }
     }
 
