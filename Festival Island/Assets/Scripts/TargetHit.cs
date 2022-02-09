@@ -1,12 +1,21 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TargetHit : MonoBehaviour
 {
+    private ActionBasedController xr;
+
+    void Start()
+    {
+        xr = (ActionBasedController)GameObject.FindObjectOfType(typeof(ActionBasedController));
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ball"))
         {
+            xr.SendHapticImpulse(0.8f, 0.3f);
             UpdateScore();
         }
     }

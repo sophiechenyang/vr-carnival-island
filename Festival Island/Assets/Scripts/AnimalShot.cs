@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
 public class AnimalShot : MonoBehaviour
 {
     private AudioSource m_audio;
+    private ActionBasedController xr;
 
     private void Start()
     {
         m_audio = GetComponent<AudioSource>();
+        xr = (ActionBasedController)GameObject.FindObjectOfType(typeof(ActionBasedController));
     }
 
     private void OnTriggerEnter(Collider other)
@@ -15,6 +18,7 @@ public class AnimalShot : MonoBehaviour
         if (other.gameObject.CompareTag("chicken"))
         {
             m_audio.Play();
+            xr.SendHapticImpulse(0.8f, 0.3f);
             UpdateScore();
             Destroy(other.gameObject);
         }
