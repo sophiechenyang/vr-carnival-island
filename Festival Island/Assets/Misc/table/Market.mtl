@@ -1,0 +1,22 @@
+# Blender MTL File: 'Market.blend'
+# Material Count: 2
+
+newmtl Material.001
+Ns 617.647059
+Ka 0.000000 0.000000 0.000000
+Kd 0.397422 0.397422 0.397422
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\\Blender\\Market_Texture.jpg
+
+newmtl Material.002
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.497143 0.497143 0.497143
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd D:\\Blender\\Market_Texture.jpg
