@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class ShootingGameManager : MonoBehaviour
 {
@@ -6,13 +7,21 @@ public class ShootingGameManager : MonoBehaviour
     public GameObject instructionTxt;
     public GameObject scoreTxt;
     public GameObject gameOverTxt;
+    private TextMeshPro scoreText;
 
     public int shootingScore = 0;
-
     private float spawnInterval = 1.5f;
     private bool gameStarted = false;
     private int chickenCount = 0;
     private int maxChickenSpawned = 20;
+
+    private AudioSource m_audio;
+
+    void Start()
+    {
+        m_audio = GetComponent<AudioSource>();
+        scoreText = scoreTxt.GetComponent<TextMeshPro>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,12 +34,14 @@ public class ShootingGameManager : MonoBehaviour
     void NewShootingGame()
     {
         Debug.Log("starting game");
+        m_audio.Play();
         shootingScore = 0;
         chickenCount = 0;
         gameStarted = true;
         instructionTxt.SetActive(false);
         gameOverTxt.SetActive(false);
         scoreTxt.SetActive(true);
+        scoreText.SetText("0");
         InvokeRepeating("SpawnAnimals", 0, spawnInterval);
 
     }

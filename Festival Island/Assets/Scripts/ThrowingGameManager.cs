@@ -6,6 +6,12 @@ public class ThrowingGameManager : MonoBehaviour
     public GameObject[] ballPrefabs;
     public GameObject ballPosition;
     public GameObject scoreText,scoreValue,instructions;
+    private AudioSource m_audio;
+
+    void Start()
+    {
+        m_audio = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +29,7 @@ public class ThrowingGameManager : MonoBehaviour
     {
         gameStarted = true;
         Debug.Log(gameStarted);
+        m_audio.Play();
         scoreText.SetActive(true);
         scoreValue.SetActive(true);
         instructions.SetActive(false);

@@ -3,7 +3,7 @@ using UnityEngine;
 public class AutoMove: MonoBehaviour
 {
     Vector3 origin;
-    float speed = 1.2f;
+    public float speed = 1.2f;
     public float amplitude;
 
     private void Start()

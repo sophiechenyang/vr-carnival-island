@@ -5,9 +5,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class TargetHit : MonoBehaviour
 {
     private ActionBasedController xr;
+    private AudioSource m_audio;
 
     void Start()
     {
+        m_audio = GetComponent<AudioSource>();
         xr = (ActionBasedController)GameObject.FindObjectOfType(typeof(ActionBasedController));
     }
 
@@ -16,6 +18,7 @@ public class TargetHit : MonoBehaviour
         if (collision.gameObject.CompareTag("ball"))
         {
             xr.SendHapticImpulse(0.8f, 0.3f);
+            m_audio.Play();
             UpdateScore();
         }
     }
