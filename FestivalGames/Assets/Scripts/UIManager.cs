@@ -126,7 +126,7 @@ public class UIManager : MonoBehaviour
     {
         pooler.ResetPool();
         canCount = false;
-        sceneController.LoadThisScene("Demo1");
+        sceneController.LoadThisScene("FestivalIsland");
     }
 
     //for close all buttons

@@ -3,19 +3,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Haptics : MonoBehaviour
 {
-    public ActionBasedController xr;
-    public string m_tag = "petting";
+    private ActionBasedController xr;
 
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if (other.gameObject.CompareTag(m_tag))
-        {
-            ActivateHaptic();
-        }
-        
+        xr = (ActionBasedController)GameObject.FindObjectOfType(typeof(ActionBasedController));
     }
 
-    void ActivateHaptic()
+    private void OnTriggerEnter(Collider other)
     {
         xr.SendHapticImpulse(0.4f, 3f);
     }

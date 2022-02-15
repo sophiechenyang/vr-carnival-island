@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FeedAnimal : MonoBehaviour
 {
     Animator m_animator;
     public bool isEating;
+    AudioSource m_audioSource;
 
     void Start()
     {
         m_animator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
+        m_audioSource.playOnAwake = false;
     }
 
     void Update()
@@ -19,15 +20,17 @@ public class FeedAnimal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("food"))
+        if (other.gameObject.CompareTag("deerfood"))
         {
             isEating = true;
+            m_audioSource.Play();
+            Destroy(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("food"))
+        if (other.gameObject.CompareTag("deerfood"))
         {
             isEating = false;
         }

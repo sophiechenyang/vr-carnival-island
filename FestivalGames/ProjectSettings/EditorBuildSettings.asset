@@ -12,14 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MiaFestival.unity
     guid: 58935e3217873433bb357fcae6541905
   - enabled: 1
-    path: Assets/Sophie/Assets/Demo1.unity
+    path: Assets/Sophie/Assets/FestivalIsland.unity
+    guid: b84dce19fd4b947958dd73dfc27390f8
+  - enabled: 0
+    path: Assets/Sophie/Assets 1/Demo1.unity
     guid: 2add2b4d47d864d369667e69db665894
   - enabled: 0
-    path: Assets/Scenes/CakeNinja/FruitNinja.unity
-    guid: a338ae2c37c75fa4393e3ef8a114bf36
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/CakeNinja/CakeNinja.unity
-    guid: c85357798405f184b8e21a71d918bc26
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a375faf21e03e44188dfc761a1c93b1c,
       type: 2}
