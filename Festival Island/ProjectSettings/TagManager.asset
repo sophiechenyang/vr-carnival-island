@@ -12,6 +12,7 @@ TagManager:
   - food
   - petting
   - Ground
+  - deerfood
   layers:
   - Default
   - TransparentFX
