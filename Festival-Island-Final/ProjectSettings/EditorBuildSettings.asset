@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MiaFestival.unity
     guid: 58935e3217873433bb357fcae6541905
   - enabled: 1
-    path: Assets/Sophie/Assets/FestivalIsland.unity
+    path: Assets/Scenes/Sophie/Assets/FestivalIsland.unity
     guid: b84dce19fd4b947958dd73dfc27390f8
   - enabled: 0
     path: Assets/Sophie/Assets 1/Demo1.unity
